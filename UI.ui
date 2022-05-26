@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1160</width>
+    <height>709</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>影像處理開發平台</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="imageDisplayer">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1160</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>檔案</string>
+    </property>
+    <addaction name="actionOpen_Image"/>
+    <addaction name="actionSave_Image"/>
+   </widget>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>設定</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>顯示或改變色彩空間</string>
+     </property>
+     <addaction name="action_convertGrayScale"/>
+     <addaction name="action_convertRGB"/>
+     <addaction name="action_convertHSV"/>
+    </widget>
+    <addaction name="action_ROI"/>
+    <addaction name="action_showHisto"/>
+    <addaction name="menu"/>
+    <addaction name="actionRestoreOriginal"/>
+   </widget>
+   <widget class="QMenu" name="menuImage_Processing">
+    <property name="title">
+     <string>影像處理</string>
+    </property>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>低通濾波</string>
+     </property>
+     <addaction name="action_gaussianFiltering"/>
+     <addaction name="action_medianFiltering"/>
+     <addaction name="action_averageFiltering"/>
+     <addaction name="action_bilateralFiltering"/>
+    </widget>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>高通濾波</string>
+     </property>
+     <addaction name="action_gaussianHighPass"/>
+     <addaction name="action_laplacianFiltering"/>
+    </widget>
+    <addaction name="action_thresholding"/>
+    <addaction name="action_histoEqualization"/>
+    <addaction name="menu_2"/>
+    <addaction name="menu_3"/>
+    <addaction name="action_boundryDetection"/>
+    <addaction name="action_perspectiveTransform"/>
+    <addaction name="action_addNoise"/>
+    <addaction name="action_affineTransform"/>
+    <addaction name="separator"/>
+    <addaction name="action_CornerHarris"/>
+    <addaction name="action_FindContours"/>
+    <addaction name="action_Erosion"/>
+    <addaction name="action_Dilation"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSetting"/>
+   <addaction name="menuImage_Processing"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_Image">
+   <property name="text">
+    <string>Open Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave_Image">
+   <property name="text">
+    <string>Save Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_ROI">
+   <property name="text">
+    <string>設定ROI</string>
+   </property>
+  </action>
+  <action name="action_showHisto">
+   <property name="text">
+    <string>顯示直方圖</string>
+   </property>
+  </action>
+  <action name="actionRestoreOriginal">
+   <property name="text">
+    <string>恢復原始圖片</string>
+   </property>
+  </action>
+  <action name="action_convertGrayScale">
+   <property name="text">
+    <string>轉換灰階</string>
+   </property>
+  </action>
+  <action name="action_thresholding">
+   <property name="text">
+    <string>影像二值化</string>
+   </property>
+  </action>
+  <action name="action_histoEqualization">
+   <property name="text">
+    <string>直方圖等化</string>
+   </property>
+  </action>
+  <action name="action_convertRGB">
+   <property name="text">
+    <string>轉換RGB</string>
+   </property>
+  </action>
+  <action name="action_boundryDetection">
+   <property name="text">
+    <string>邊界偵測</string>
+   </property>
+  </action>
+  <action name="action_perspectiveTransform">
+   <property name="text">
+    <string>透視投影轉換</string>
+   </property>
+  </action>
+  <action name="action_gaussianFiltering">
+   <property name="text">
+    <string>高斯濾波</string>
+   </property>
+  </action>
+  <action name="action_medianFiltering">
+   <property name="text">
+    <string>中值濾波</string>
+   </property>
+  </action>
+  <action name="action_averageFiltering">
+   <property name="text">
+    <string>均值濾波</string>
+   </property>
+  </action>
+  <action name="action_addNoise">
+   <property name="text">
+    <string>加入影像雜訊</string>
+   </property>
+  </action>
+  <action name="action_bilateralFiltering">
+   <property name="text">
+    <string>雙邊濾波</string>
+   </property>
+  </action>
+  <action name="action_gaussianHighPass">
+   <property name="text">
+    <string>高斯高通濾波</string>
+   </property>
+  </action>
+  <action name="action_laplacianFiltering">
+   <property name="text">
+    <string>拉普拉斯濾波</string>
+   </property>
+  </action>
+  <action name="action_affineTransform">
+   <property name="text">
+    <string>仿射轉換</string>
+   </property>
+  </action>
+  <action name="action_convertHSV">
+   <property name="text">
+    <string>轉換HSV</string>
+   </property>
+  </action>
+  <action name="action_CornerHarris">
+   <property name="text">
+    <string>Corner Harris</string>
+   </property>
+  </action>
+  <action name="action_FindContours">
+   <property name="text">
+    <string>Find Contours</string>
+   </property>
+  </action>
+  <action name="action_Erosion">
+   <property name="text">
+    <string>Erosion</string>
+   </property>
+  </action>
+  <action name="action_Dilation">
+   <property name="text">
+    <string>Dilation</string>
+   </property>
+  </action>
+  <action name="action_Morphology">
+   <property name="text">
+    <string>Morphology</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
