@@ -26,6 +26,9 @@ class MainWindow_controller(QtWidgets.QMainWindow):
     # 設定元件
     def setup_control(self):
         self.data = {}
+        self.ui.statusLabel = QtWidgets.QLabel(self.statusBar())
+        self.ui.statusLabel.setText("")
+        self.statusBar().addPermanentWidget(self.ui.statusLabel)
 
     # 負責綁定事件
     def event_binding(self):
@@ -93,5 +96,6 @@ class MainWindow_controller(QtWidgets.QMainWindow):
     def listViewClicked(self, qmodelIndex):
         self.cv2_image = cv2.imdecode(np.fromfile(self.data["loaded_filepaths"][qmodelIndex.row()], dtype=np.uint8), -1)
         self.imageDisplay(self.cv2_image)
+        self.ui.statusLabel.setText(self.data["loaded_filenames"][qmodelIndex.row()])
 
 
