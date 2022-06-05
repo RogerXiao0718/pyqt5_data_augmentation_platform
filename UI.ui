@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1369</width>
+    <height>770</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>欲擴增檔案</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="filename_listwidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>281</width>
+      <height>621</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imageDisplayer">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>60</y>
+      <width>600</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>600</width>
+      <height>600</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>30</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>資料擴增方式</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>80</y>
+      <width>58</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>角度旋轉</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="rotationSlider">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>80</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>60</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rotationValueLabel">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>80</y>
+      <width>58</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>110</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>角度旋轉擴增</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="augmentation_inputBox">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>110</y>
+      <width>31</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>110</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>倍</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="flip_checkBox">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>140</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="text">
+     <string>水平翻轉</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="histo_checkBox">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>170</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="text">
+     <string>直方圖等化</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>210</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>亮度</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="brightnessSlider">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>210</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>5</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>330</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hue</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="hueSlider">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>330</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>5</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>250</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>對比度</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="contrastSlider">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>250</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>5</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="highlight_checkBox">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>360</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="text">
+     <string>反白</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>290</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>飽和度</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="saturateSlider">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>290</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>5</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="brightnessValueLabel">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>210</y>
+      <width>58</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="contrastValueLabel">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>250</y>
+      <width>58</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="saturateValueLabel">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>290</y>
+      <width>58</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hueValueLabel">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>330</y>
+      <width>58</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="augmentationButton">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>630</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>確定擴增</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1369</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>檔案</string>
+    </property>
+    <addaction name="action_loadImage"/>
+    <addaction name="action_loadFolder"/>
+    <addaction name="action_loadAnnotation"/>
+    <addaction name="action_selectSavePath"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_loadImage">
+   <property name="text">
+    <string>載入圖片</string>
+   </property>
+  </action>
+  <action name="action_loadFolder">
+   <property name="text">
+    <string>載入資料夾</string>
+   </property>
+  </action>
+  <action name="action_selectSavePath">
+   <property name="text">
+    <string>選擇儲存位置</string>
+   </property>
+  </action>
+  <action name="action_loadAnnotation">
+   <property name="text">
+    <string>載入標記檔</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
