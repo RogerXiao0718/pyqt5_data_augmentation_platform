@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>數位影像資料擴增平台  By. 蕭立淮</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -46,8 +46,8 @@
    <widget class="QLabel" name="imageDisplayer">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>60</y>
+      <x>360</x>
+      <y>70</y>
       <width>600</width>
       <height>600</height>
      </rect>
